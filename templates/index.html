@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>RealBeautyInside</title>
+    <style>
+        a{
+            color: #8e95d0;
+            text-decoration: none;
+        }
+        td,th,tr,table{
+            border: 1px solid brown;
+        }
+        td{
+            max-width: 400px;
+            overflow-x: scroll;
+        }
+    </style>
+</head>
+<body>
+<h1>Table: {{name}}</h1>
+<h1><a href="/">← TABLES</a></h1>
+<br>
+<table style="width:100vw">
+    <tr>
+        {% for name in headers%}
+        <th>{{name}}</th>
+        {% endfor %}
+    </tr>
+    {% for item in data %}
+    <tr>
+        {% for info in item %}
+            <td>
+                {{info}}
+            </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

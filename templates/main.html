@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <style>
+        a {
+            display: inline-block;
+            color: #8e95d0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<h1>RealBeautyInside</h1>
+    {% for x in data %}
+        <h2>
+            <a href="{{x}}">{{x}}</a>
+            <br>
+        </h2>
+    {% endfor %}
+</body>
+</html>
